@@ -1,0 +1,79 @@
+body{
+    background-image: url("../img/aa.jpg");
+    background-repeat: no-repeat;
+  
+    background-attachment: fixed;
+    background-position: center;
+    background-size: cover;
+}
+body::after {
+    content: "";
+    background: url("img/aa.jpg");
+    opacity: 0.5;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    position: absolute;
+    z-index: -1;   
+  }
+#container{
+    width:400px;
+    margin:0 auto;
+    margin-top:10%;
+}
+/* Bordered form */
+form {
+    width:100%;
+    padding: 30px;
+    border: 1px solid #f1f1f1;
+    background: #fff;
+    box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.2), 0 5px 5px 0 rgba(0, 0, 0, 0.24);
+}
+#container h1{
+    width: 38%;
+    margin: 0 auto;
+    padding-bottom: 10px;
+    color: rgba(90, 24, 0, 0.83);
+}
+
+/* Full-width inputs */
+input[type=email], input[type=password] {
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    background-color:#ccc;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+}
+
+/* Set a style for all buttons */
+input[type=submit] {
+    background-color: brown;
+
+    padding: 14px 20px;
+    margin: 8px 0;
+    border: none;
+    cursor: pointer;
+    width: 100%;
+}
+input[type=submit]:hover {
+    background-color: brown;
+    color: black;
+    border: 1px solid black;
+}
+input[type=button] {
+    background-color: grey;
+
+    padding: 14px 20px;
+    margin: 8px 0;
+    border: none;
+    cursor: pointer;
+    width: 100%;
+}
+input[type=button]:hover  {
+    background-color: grey;
+    color: black;
+    border: 1px solid black;
+}

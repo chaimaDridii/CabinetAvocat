@@ -1,0 +1,79 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Dossier{% endblock %}
+
+{% block body %}
+<style>
+* {
+    border: 0;
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+  }
+  body{background-image: url("../img/aa.jpg");}
+  img{height: 100%;
+    width: 100%;}
+    a {
+      background-color:White;
+    font-style: oblique;
+    margin-left: 2em;
+    line-height: 2;
+border-radius:3em;
+   text-shadow:0 0 2px black,0 0 30px black,5px 9px 5px #333, 0 0 150px black;color:black;
+  } 
+  a:hover{color:blue;}
+  th {
+ border:solid 1px;
+    font-style: oblique;
+    margin-left: 2em;
+    line-height: 2;
+    border-color: black;
+      margin-left:15.5em;
+   
+   text-shadow:0 0 2px black,0 0 30px black,5px 9px 5px #333, 0 0 150px black;color:black;
+
+  }
+
+
+td {
+ border:solid 1px;
+    font-style: oblique;
+    margin-left: 2em;
+    line-height: 2;
+    border-color: black;
+      margin-left:15.5em;
+   text-shadow:0 0 2px black,0 0 30px black,5px 9px 5px #333, 0 0 150px black;color:White;
+
+  }
+  table{
+  border:solid 3px;}
+ 
+  }
+ 
+</style>
+<center>
+    <h1>Dossier</h1>
+
+    <table class="table">
+        <tbody>
+            <tr>
+                <th>Id</th>
+                <td>{{ dossier.id }}</td>
+            </tr>
+            <tr>
+                <th>Payyement</th>
+                <td>{{ dossier.Payyement }}</td>
+            </tr>
+            <tr>
+                <th>CreatedAt</th>
+                <td>{{ dossier.CreatedAt ? dossier.CreatedAt|date('Y-m-d') : '' }}</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <a href="{{ path('dossier_index') }}">back to list</a>
+
+    <a href="{{ path('dossier_edit', {'id': dossier.id}) }}">edit</a>
+
+    {{ include('dossier/_delete_form.html.twig') }}
+{% endblock %}

@@ -1,0 +1,91 @@
+
+
+
+
+
+{% block body %}
+<html>
+      <link href="css/profil.css" rel="stylesheet" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<style>
+  .title {
+    color: black;
+    font-size: 18px;
+  }
+  .card {
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    max-width: 300px;
+    margin: auto;
+    text-align: center;
+    background-color: white;
+  }
+  
+  </style>
+  <body>
+
+<div class="example-wrapper">
+<nav id="navbar" class="">
+  <div class="nav-wrapper">
+    <!-- Navbar Logo -->
+    <div class="logo">
+    
+  
+     
+       <img style=" margin-top:0.5em; margin-left:-55em; border-radius:5em; width:80px ; height:80px;" height="100" width="100" src="img/log.jpg" alt="..." class="img2" />
+    </div>
+
+    <!-- Navbar Links -->
+    <ul id="menu">
+      <li><a href="home">Home</a></li><!--
+   --><li><a href="about">About us</a></li><!--
+   --><li><a href="vieww">Profil</a></li><!--
+   --><li><a href="rdvv">Appointments</a></li>
+   <li><a href="login">Logout</a></li>
+    </ul>
+  </div>
+</nav>
+</div>
+</body><center><h1><div class="card">
+<h2>Your profile</h2>
+  <p class="title"> Firstname :{{ app.user.name}}  <br>
+       
+        Mail :{{ app.user.email}}<br>
+        Password : **********<br></p>
+  <p class="cc">
+     
+     
+        <a class="btn btn-secondary my-2 my-sm-0" href="{{ path('user_edit2', {'id': app.user.id}) }}">Edit</a>
+   </p> 
+   
+
+ 
+  <p><button>
+<center><a class="btn btn-secondary my-2 my-sm-0" href="homee">Back to home</a></center></button></p>
+</div></center>
+</p>
+                       </h1>
+
+<div class="img">
+<img src="img/aa.jpg" style="width:100% ; height:108%;" alt="..." /></div>
+ 
+<footer> 
+
+
+    <!-- Navbar Links -->
+    <ul class="about">
+      <li><a href="about">about Us</li><!--
+   -
+   --><li><a href="vieww">Services</a></li>
+   <li>Copyright &copy; Helping 2021</li>
+    </ul>
+<div class="fb">
+    <ul >
+      <li><a href="https://www.facebook.com/"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
+      <li><a href="https://www.instagram.com/?hl=en"><i class="fa fa-instagram" aria-hidden="true"></i></a></li>
+      <li><a href="https://www.pinterest.com/"><i class="fa fa-pinterest-p" aria-hidden="true"></i></a></li>
+      <li><a href="https://twitter.com/?lang=en"><i class="fa fa-twitter" aria-hidden="true"></i></a></li>
+    </ul>
+</div>
+</footer>
+</html>
+{% endblock %}

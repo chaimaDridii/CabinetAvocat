@@ -1,0 +1,114 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}DateRDV index{% endblock %}
+
+{% block body %}
+<style>
+* {
+    border: 0;
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+  }
+  body{background-image: url("../img/aa.jpg");}
+  img{height: 100%;
+    width: 100%;}
+    a {
+width:300px;
+text-align:center;
+vertical-align:middle;
+background-color:black;
+color:white;
+
+border-radius:1em ;
+border:solid black;
+text-decoration:none;
+
+
+   text-shadow:0 0 2px black,0 0 30px black,5px 9px 5px #333, 0 0 150px black;color:White;
+
+}
+ a:hover {
+background:url(....png) no-repeat;
+border:solid transparent;
+}
+  th {
+ border:solid 1px;
+    font-style: oblique;
+    margin-left: 2em;
+    line-height: 2;
+    border-color: black;
+      margin-left:15.5em;
+   
+   text-shadow:0 0 2px black,0 0 30px black,5px 9px 5px #333, 0 0 150px black;color:black;
+
+  }
+h1{
+    font-style: oblique;
+   
+    line-height: 2;
+    border-color: black;
+   
+   text-shadow:0 0 2px black,0 0 30px black,5px 9px 5px #333, 0 0 150px black;color:black;
+}
+h2 {
+    font-style: oblique;
+    margin-left: 2em;
+    line-height: 2;
+    border-color: black;
+    
+   
+   text-shadow:0 0 2px black,0 0 30px black,5px 9px 5px #333, 0 0 150px black;color:black;
+
+  }
+td {
+ border:solid 1px;
+    font-style: oblique;
+    margin-left: 2em;
+    line-height: 2;
+    border-color: black;
+      margin-left:15.5em;
+   text-shadow:0 0 2px black,0 0 30px black,5px 9px 5px #333, 0 0 150px black;color:White;
+
+  }
+  table{
+  border:solid 3px;}
+ 
+  }
+ 
+</style>
+<center>
+    <h1>Appointments list</h1>
+
+    <table class="table">
+        <thead>
+            <tr>
+                <th>Id</th>
+                <th>Date</th>
+                <th>Client name</th>
+                <th>actions</th>
+            </tr>
+        </thead>
+        <tbody>
+        {% for date_r_d_v in date_r_d_vs %}
+            <tr>
+                <td>{{ date_r_d_v.id }}</td>
+                <td>{{ date_r_d_v.DateRDV ? date_r_d_v.DateRDV|date('Y-m-d') : '' }}</td>
+                 <td>{{ date_r_d_v.idclient }}</td>
+                <td>
+                    <a href="{{ path('date_r_d_v_show', {'id': date_r_d_v.id}) }}">show</a>
+                    <a href="{{ path('date_r_d_v_edit', {'id': date_r_d_v.id}) }}">edit</a>
+                </td>
+            </tr>
+        {% else %}
+            <tr>
+                <td colspan="3">no records found</td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+<br>
+    <a href="{{ path('date_r_d_v_new') }}">Create new</a><br><br>
+    <a href="{{ path('admin') }}">Back </a>
+    </center>s
+{% endblock %}

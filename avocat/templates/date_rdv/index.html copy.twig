@@ -1,0 +1,72 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}DateRDV index{% endblock %}
+
+{% block body %}
+<style>
+* {
+    border: 0;
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+  }
+  body{background-image: url("../img/aa.jpg");
+  margin-top:2em;}
+  img{height: 100%;
+    width: 100%;}
+    a {
+width:300px;
+text-align:center;
+vertical-align:middle;
+background-color:black;
+color:white;
+
+border-radius:1em ;
+border:solid black;
+text-decoration:none;
+
+    margin-left: 2em;
+   text-shadow:0 0 2px black,0 0 30px black,5px 9px 5px #333, 0 0 150px black;color:White;
+
+}
+ a:hover {
+background:url(....png) no-repeat;
+border:solid transparent;
+}
+
+h2 {
+    
+    font-style: oblique;
+    margin-left: 2em;
+    line-height: 2;
+   text-shadow:0 0 2px black,0 0 30px black,5px 9px 5px #333, 0 0 150px black;color:black;
+
+  }
+h1 {
+
+    font-style: oblique;
+    margin-left: 1em;
+    line-height: 2;
+    
+   text-shadow:0 0 2px black,0 0 30px black,5px 9px 5px #333, 0 0 150px black;color:White;
+
+  }
+ 
+ 
+  
+ 
+</style>
+<!-- table{
+  border:solid 3px;
+  width:10em;}-->
+<body>
+<center>
+    <h2>Your appointments</h2>
+
+  
+                <h1 >{{ date_r_d_vs[0].DateRDV ? date_r_d_vs[0].DateRDV|date('Y-m-d') : '' }}</h1>
+            
+     <br>
+    <a href="{{ path('rdvv') }}">Back </a>
+    </center></body>
+{% endblock %}

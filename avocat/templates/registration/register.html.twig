@@ -1,0 +1,36 @@
+
+
+{% block body %}
+
+<html>
+<head>
+ <link href="css/rr.css" rel="stylesheet" />
+</head>
+
+ <div id="container">
+       <form method="post">
+   <center>
+<h1>Register</h1>
+
+
+<form >
+<h2>  {{ form_start(registrationForm) }}</h2>
+                   {{ form_row(registrationForm.Name) }}
+                       {{ form_row(registrationForm.email) }}
+                       {{ form_row(registrationForm.plainPassword) }}</center>
+                     <button class="btn btn-primary btn-block">Register</button>  
+                      <a href="login"><input type="button" value="Log In"></a>
+                   {{ form_end(registrationForm) }}
+             
+                 </div>
+
+<center>
+
+  <input type="hidden" name="did_login" value="true">
+
+    <input type="hidden" name="_csrf_token" id='submit'
+           value="{{ csrf_token('authenticate') }}">
+                      
+                          </div>
+           </form>
+{% endblock %}

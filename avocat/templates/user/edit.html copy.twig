@@ -1,0 +1,19 @@
+
+    {% extends 'base.html.twig' %}
+
+{% block title %}Update Profile {{ app.user.name }}
+{% endblock %}
+
+{% block body %}<center>
+<div class="grix xs4 ">
+<div class="col-xs4">
+ <h1> {{ app.user.name }} Profil
+ </h1>
+  {{ include('user/_form.html.twig', {'button_label': 'Update'}) }}
+     <a  class="btn btn-dark" href=" {{ path('vieww')}}">Back</a></li> </div>
+  
+  {{ form(form)}}
+</div>
+ </div>  
+</center>
+{% endblock %}

@@ -1,0 +1,75 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}TypeAffaire{% endblock %}
+
+{% block body %}
+<style>
+* {
+    border: 0;
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+  }
+  body{background-image: url("../img/aa.jpg");}
+  img{height: 100%;
+    width: 100%;}
+    a {
+      background-color:White;
+    font-style: oblique;
+    margin-left: 2em;
+    line-height: 2;
+border-radius:3em;
+   text-shadow:0 0 2px black,0 0 30px black,5px 9px 5px #333, 0 0 150px black;color:black;
+  } 
+  a:hover{color:blue;}
+  th {
+ border:solid 1px;
+    font-style: oblique;
+    margin-left: 2em;
+    line-height: 2;
+    border-color: black;
+      margin-left:15.5em;
+   
+   text-shadow:0 0 2px black,0 0 30px black,5px 9px 5px #333, 0 0 150px black;color:black;
+
+  }
+
+
+td {
+ border:solid 1px;
+    font-style: oblique;
+    margin-left: 2em;
+    line-height: 2;
+    border-color: black;
+      margin-left:15.5em;
+   text-shadow:0 0 2px black,0 0 30px black,5px 9px 5px #333, 0 0 150px black;color:White;
+
+  }
+  table{
+  border:solid 3px;}
+ 
+  }
+ 
+</style>
+<center>
+    <h1>TypeAffaire</h1>
+
+    <table class="table">
+        <tbody>
+            <tr>
+                <th>Id</th>
+                <td>{{ type_affaire.id }}</td>
+            </tr>
+            <tr>
+                <th>Contenu</th>
+                <td>{{ type_affaire.Contenu }}</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <a href="{{ path('type_affaire_index') }}">back to list</a>
+
+    <a href="{{ path('type_affaire_edit', {'id': type_affaire.id}) }}">edit</a>
+
+    {{ include('type_affaire/_delete_form.html.twig') }}
+{% endblock %}

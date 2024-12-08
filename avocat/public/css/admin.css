@@ -1,0 +1,132 @@
+* {
+  border: 0;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+img{height: 100%;
+  width: 100%;}
+ h1 {
+
+ opacity: 0.9;
+   margin-top: 10em;
+    margin-bottom:-15.5em;
+  font-style: oblique;
+  margin-left: 2em;
+  line-height: 2;
+  border-color: black;
+ 
+ text-shadow:0 0 2px black,0 0 30px black,5px 9px 5px #333, 0 0 150px black;color:White;
+
+}
+
+p{   
+   text-shadow:0 0 2px black,0 0 30px black,5px 9px 5px #333, 0 0 150px black;color:red;
+}
+
+.fb {
+  margin-left: 75em;
+  margin-top: -25em;
+}
+i{  width: 4.7em; 
+   color:white;
+  display: inline;}
+
+i:hover{font-weight: bold;
+  color:white;}  body {
+
+ /* pour anciens Chrome et Safari */
+ 
+   
+    background-repeat: repeat;
+
+}
+a {
+  color: inherit;
+  font-family: inherit;
+  font-size: inherit;
+  text-decoration: none;
+}
+
+
+/*======================================================
+                          Navbar
+  ======================================================*/
+
+
+
+
+#navbar li {
+  display: inline-block;
+}
+footer{margin-top: -2em;}
+ul{list-style-type: none;}
+footer li{ color: white;
+  display: block;
+  font-size: 0.7em;
+  height: 50px;
+  letter-spacing: 1px;
+  margin: 0 20px;
+  padding: 0 4px;
+  position: relative;
+  text-decoration: none;
+  text-transform: uppercase;
+  transition: all 0.5s ease;
+  -webkit-transition: all 0.5s ease;
+  display: inline-block;
+  margin-left: 2em;}
+  footer li:hover{font-weight: bold;}
+#navbar li a {
+  color: black;
+  display: block;
+  font-size: 0.7em;
+  height: 50px;
+  letter-spacing: 1px;
+  margin: 0 20px;
+  padding: 0 4px;
+  position: relative;
+  text-decoration: none;
+  text-transform: uppercase;
+  transition: all 0.5s ease;
+  -webkit-transition: all 0.5s ease;
+}
+
+#navbar li a:hover {
+  /* border-bottom: 1px solid rgb(28, 121, 184); */
+  color: rgb(28, 121, 184);
+  transition: all 1s ease;
+  -webkit-transition: all 1s ease;
+}
+
+/* Animated Bottom Line */
+#navbar li a:before, #navbar li a:after {
+  content: '';
+  position: absolute;
+  width: 0%;
+  height: 1px;
+  bottom: -1px;
+  background: rgb(13, 26, 38);
+}
+
+#navbar li a:before {
+  left: 0;
+  transition: 0.5s;
+}
+
+#navbar li a:after {
+  background: rgb(13, 26, 38);
+  right: 0;
+  /* transition: width 0.8s cubic-bezier(0.22, 0.61, 0.36, 1); */
+}
+
+#navbar li a:hover:before {
+  background: rgb(13, 26, 38);
+  width: 100%;
+  transition: width 0.5s cubic-bezier((0.22, 0.61, 0.36, 1));
+}
+
+#navbar li a:hover:after {
+  background: transparent;
+  width: 100%;
+  /* transition: 0s; */
+}

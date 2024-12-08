@@ -1,0 +1,59 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Edit DateRDV{% endblock %}
+
+{% block body %}
+
+<style>
+* {
+    border: 0;
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+  }
+  body{background-image: url("../img/aa.jpg");}
+  img{height: 100%;
+    width: 100%;}
+   th {
+
+    font-style: oblique;
+    margin-left: 2em;
+    line-height: 2;
+    border-color: black;
+   
+   text-shadow:0 0 2px black,0 0 30px black,5px 9px 5px #333, 0 0 150px black;color:black;
+
+  }
+  a{background-color:White;}
+  h2 {
+      
+    font-style: oblique;
+    margin-left: 2em;
+    line-height: 2;
+    border-color: black;
+   text-shadow:0 0 2px black,0 0 30px black,5px 9px 5px #333, 0 0 150px black;color:black;
+  }
+td {
+
+    font-style: oblique;
+    margin-left: 2em;
+    line-height: 2;
+    border-color: black;
+      margin-left:15.5em;
+   text-shadow:0 0 2px black,0 0 30px black,5px 9px 5px #333, 0 0 150px black;color:White;
+
+  }
+ 
+  }
+ 
+</style>
+<center>
+
+    <h1>Edit DateRDV</h1>
+
+    {{ include('date_rdv/_form.html.twig', {'button_label': 'Update'}) }}
+
+    <a href="{{ path('date_r_d_v_index') }}">back to list</a>
+
+    {{ include('date_rdv/_delete_form.html.twig') }}</center>
+{% endblock %}

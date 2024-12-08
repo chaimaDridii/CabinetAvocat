@@ -1,0 +1,66 @@
+
+
+{% block body %}
+<html>
+        <link href="css/h.css" rel="stylesheet" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<body>
+
+<div class="example-wrapper">
+<nav id="navbar" class="">
+  <div class="nav-wrapper">
+    <!-- Navbar Logo -->
+    <div class="logo">
+    
+  
+     
+       <img style=" margin-top:0.5em; margin-left:-55em; border-radius:5em; width:80px ; height:80px;" height="100" width="100" src="img/log.jpg" alt="..." class="img2" />
+    </div>
+
+    <!-- Navbar Links -->
+    <ul id="menu">
+      <li><a href="home">Home</a></li><!--
+   --><li><a href="about">About us</a></li><!--
+   --><li><a href="vieww">Profil</a></li><!--
+   --><li><a href="rdvv">Appointments</a></li>
+    {% if is_granted ('ROLE_ADMIN') %}<li><a href="admin">Admin</a></li>{% endif %}
+   <li><a href="login">Logout</a></li>
+    </ul>
+  </div>
+</nav>
+</div>
+</body><h1><p>Welcome to our practice</p>
+
+
+Our Firm is Exclusive dedicated to family law that we practice on a daily basis. This allows us to advise you in the best possible way in the family problems that you encounter.</p>
+                       </h1>
+
+<div class="img">
+<img src="img/aa.jpg" style="width:100% ; height:109%;" alt="..." /></div>
+ 
+<footer> 
+
+
+    <!-- Navbar Links -->
+    <ul class="about">
+      <li><a href="about">about Us</li><!--
+   -
+   --><li><a href="vieww">Services</a></li>
+   <li>Copyright &copy; Helping 2021</li>
+    </ul>
+<div class="fb">
+    <ul >
+      <li><a href="https://www.facebook.com/"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
+      <li><a href="https://www.instagram.com/?hl=en"><i class="fa fa-instagram" aria-hidden="true"></i></a></li>
+      <li><a href="https://www.pinterest.com/"><i class="fa fa-pinterest-p" aria-hidden="true"></i></a></li>
+      <li><a href="https://twitter.com/?lang=en"><i class="fa fa-twitter" aria-hidden="true"></i></a></li>
+    </ul>
+</div>
+</footer>
+</html>
+{% endblock %}
+
+
+
+
+ 

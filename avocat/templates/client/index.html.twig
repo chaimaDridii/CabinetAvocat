@@ -1,0 +1,125 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Client index{% endblock %}
+
+{% block body %}
+<style>
+* {
+    border: 0;
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+  }
+  body{background-image: url("../img/aa.jpg");}
+  img{height: 100%;
+    width: 100%;}
+    a {
+width:300px;
+text-align:center;
+vertical-align:middle;
+background-color:black;
+color:white;
+
+border-radius:1em ;
+border:solid black;
+text-decoration:none;
+
+
+   text-shadow:0 0 2px black,0 0 30px black,5px 9px 5px #333, 0 0 150px black;color:White;
+
+}
+ a:hover {
+background:url(....png) no-repeat;
+border:solid transparent;
+}
+  th {
+ border:solid 1px;
+    font-style: oblique;
+    margin-left: 2em;
+    line-height: 2;
+    border-color: black;
+      margin-left:15.5em;
+   
+   text-shadow:0 0 2px black,0 0 30px black,5px 9px 5px #333, 0 0 150px black;color:black;
+
+  }
+h1{
+ 
+    font-style: oblique;
+    margin-left: 2em;
+    line-height: 2;
+    border-color: black;
+   
+   
+   text-shadow:0 0 2px black,0 0 30px black,5px 9px 5px #333, 0 0 150px black;color:black;
+
+  }
+h2 {
+    font-style: oblique;
+    margin-left: 2em;
+    line-height: 2;
+    border-color: black;
+    
+   
+   text-shadow:0 0 2px black,0 0 30px black,5px 9px 5px #333, 0 0 150px black;color:black;
+
+  }
+td {
+ border:solid 1px;
+    font-style: oblique;
+    margin-left: 2em;
+    line-height: 2;
+    border-color: black;
+      margin-left:15.5em;
+   text-shadow:0 0 2px black,0 0 30px black,5px 9px 5px #333, 0 0 150px black;color:White;
+
+  }
+  table{
+  border:solid 3px;}
+ 
+  }
+ 
+</style>
+<center>
+    <h1>Client List</h1>
+
+    <table class="table">
+        <thead>
+            <tr>
+                <th>Id</th>
+                <th>Name</th>
+                <th>Lastname</th>
+                <th>Email</th>
+                <th>DateBirthday</th>
+                <th>PhoneNumber</th>
+                <th>City</th>
+                <th>actions</th>
+            </tr>
+        </thead>
+        <tbody>
+        {% for client in clients %}
+            <tr>
+                <td>{{ client.id }}</td>
+                <td>{{ client.Name }}</td>
+                <td>{{ client.Lastname }}</td>
+                <td>{{ client.Email }}</td>
+                <td>{{ client.DateBirthday ? client.DateBirthday|date('Y-m-d') : '' }}</td>
+                <td>{{ client.PhoneNumber }}</td>
+                <td>{{ client.City }}</td>
+                <td>
+                    <a href="{{ path('client_show', {'id': client.id}) }}">show</a>
+                    <a href="{{ path('client_edit', {'id': client.id}) }}">edit</a>
+                </td>
+            </tr>
+        {% else %}
+            <tr>
+                <td colspan="8">no records found</td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+<br>
+    <a href="{{ path('client_new') }}">Create new</a><br><br>
+    <a href="{{ path('admin') }}">Back</a>
+    </center>
+{% endblock %}

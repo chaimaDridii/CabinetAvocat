@@ -1,0 +1,38 @@
+
+{% extends 'base.html.twig' %}
+{% block body %}
+  <link href="css/log.css" rel="stylesheet" />
+ <div id="container">
+       <form method="post">
+    {% if error %}
+        <div class="alert alert-danger">{{ error.messageKey|trans(error.messageData, 'security') }}</div>
+    {% endif %}
+
+<center><h1>Log in</h1></center>
+
+
+<form >
+
+    <label><b>Username</b></label>
+     <input type="email"  name="email" autocomplete="email" required autofocus>
+
+  <label><b>Password</b></label>
+   <input type="password" name="password"  autocomplete="current-password" required>
+    <div class="checkbox mb-3">
+            <label>
+                <input type="checkbox" name="_remember_me"> Remember me
+            </label>
+        </div>
+<center>
+  <input type="submit" value="Log In" class="btn btn-lg btn-primary btn-block">
+  <input type="hidden" name="did_login" value="true">
+
+    <input type="hidden" name="_csrf_token" id='submit'
+           value="{{ csrf_token('authenticate') }}">
+                      <a href="register"><input type="button" value="Register"></a>
+                          </div>
+           </form>
+       
+ 
+
+{% endblock %}

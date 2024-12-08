@@ -1,0 +1,24 @@
+<style>
+
+* {
+    border: 0;
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+  }
+  
+ button:hover{color:blue;}
+  body{background-image: url("../img/aa.jpg");}
+  img{height: 100%;
+    width: 100%;}
+ 
+  
+  
+ 
+</style><center>{{ form_start(form) }}
+    {{ form_widget(form) }}<br>
+    <button class="btn"style=" background-color:black;
+   width:100px; height:30px ;
+   text-shadow:0 0 2px white,0 0 30px black,5px 9px 5px #333, 0 0 150px black;color:
+   white;">{{ button_label|default('Save') }}</button>
+{{ form_end(form) }}</center>
